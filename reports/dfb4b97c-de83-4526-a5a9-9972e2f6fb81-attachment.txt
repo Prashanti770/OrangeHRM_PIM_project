@@ -1,0 +1,8 @@
+[32mINFO    [0m WDM:logger.py:16 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:16 Current edge version is 101.0.1210
+[32mINFO    [0m WDM:logger.py:16 Get LATEST edgedriver version for 101.0.1210 Edge
+[32mINFO    [0m WDM:logger.py:16 Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\101.0.1210.53\msedgedriver.exe] found in cache
+[32mINFO    [0m root:test_OH_loginpage.py:20 *************** Test_001_OH_Login *****************
+[32mINFO    [0m root:test_OH_loginpage.py:22 *************** openning Url ****************
+[32mINFO    [0m root:test_OH_loginpage.py:24 *************** Started Login page ****************
+[32mINFO    [0m root:test_OH_loginpage.py:34 *************** Login successfull ****************
