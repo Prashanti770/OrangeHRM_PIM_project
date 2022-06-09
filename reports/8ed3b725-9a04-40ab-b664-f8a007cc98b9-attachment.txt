@@ -1,0 +1,15 @@
+[32mINFO    [0m WDM:logger.py:16 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:16 Current edge version is 102.0.1245
+[32mINFO    [0m WDM:logger.py:16 Get LATEST edgedriver version for 102.0.1245 Edge
+[32mINFO    [0m WDM:logger.py:16 Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\102.0.1245.33\msedgedriver.exe] found in cache
+[32mINFO    [0m root:test_OH_loginpage.py:20 *************** Test_001_OH_Login *****************
+[32mINFO    [0m root:test_OH_loginpage.py:22 *************** openning Url ****************
+[32mINFO    [0m root:test_OH_loginpage.py:24 *************** Started Login page ****************
+[32mINFO    [0m root:test_OH_loginpage.py:34 *************** Login successfull ****************
+[32mINFO    [0m root:test_OH_PIM_EmpList.py:15 *************** Test_002_OH_PIM_EmpList *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList.py:17 *************** Clicking on PIM Module *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList.py:19 *************** Clicking on Employee List in PIM Module *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList_SearchbyJobtitle.py:12 *************** Searching Employee Info *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList_SearchbyJobtitle.py:13 *************** Employee Info - Search by Jobtitle *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList_SearchbyJobtitle.py:18 *************** Employee Info - Search button click *****************
+[32mINFO    [0m root:test_OH_PIM_EmpList_SearchbyJobtitle.py:20 *************** Employee Info - print table of search results in cmd based on jobtitle  *****************

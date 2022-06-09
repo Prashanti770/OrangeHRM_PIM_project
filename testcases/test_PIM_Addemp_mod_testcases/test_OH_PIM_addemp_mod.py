@@ -24,6 +24,8 @@ class Test_006_OH_PIM_EmpList_Add(Test_001_OH_Login):
         self.OH_pim_empinfo.oh_pim_addemp_mod()
         self.logger.info("*************** Adding Employee Details *****************")
         self.addemp_details.test_addemployee(self)
+        # self.addemp_details.test_createlogin(self)
+        self.addemp_details.test_empdetails_save(self)
 
 
 

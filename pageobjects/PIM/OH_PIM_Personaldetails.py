@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -23,7 +25,16 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
     att_cmnt = "//textarea[@id='txtAttDesc']"
     att_upload = "//input[@id='btnSaveAttachment']"
     att_cancel = "//input[@id='cancelButton']"
-
+#Edit Employee picture Locators
+    pic_xp = "//img[@id='empPic']"
+    pic_choose = "//input[@id='photofile']"
+    pic_upload_btn = "//input[@id='btnSave']"
+    pic_delete_btn = "//input[@id='btnDelete']"
+    del_popup_ok = "//input[@id='btnYes']"
+    del_popup_cancel = "//input[@id='btnNo']"
+    # del_popup_close = "//div[@id='displayAbout']/div/a"
+    del_popup_close = "×"
+    del_success = ""
 
 
     def __init__(self,driver):
@@ -69,9 +80,38 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
         cf_value.select_by_value(cfvalue)
         self.driver.find_element(By.XPATH,self.cf_save).click()
 
-    def edit_attachments(self, file, cmt_txt):
+    def upload_attach_add(self, file, cmt_txt):
         self.driver.find_element(By.XPATH, self.att_add_btn).click()
         self.driver.find_element(By.XPATH, self.att_choose).send_keys(file)
         self.driver.find_element(By.XPATH, self.att_cmnt).send_keys(cmt_txt)
+
+    def upload_attach_upload(self):
         self.driver.find_element(By.XPATH, self.att_upload).click()
-        # self.driver.find_element(By.XPATH, self.att_cancel).click()
+
+    def upload_attach_cancel(self):
+        self.driver.find_element(By.XPATH, self.att_cancel).click()
+
+    def edit_emp_pic(self):
+        self.driver.find_element(By.XPATH, self.pic_xp).click()
+    def edit_emppic_upload(self,emppic):
+        self.driver.find_element(By.XPATH, self.pic_choose).send_keys(emppic)
+        self.driver.find_element(By.XPATH, self.pic_upload_btn).click()
+    def edit_emppic_delete(self):
+        self.driver.find_element(By.XPATH, self.pic_delete_btn).click()
+
+    def del_ok(self):
+        self.driver.find_element(By.XPATH,self.del_popup_ok).click()
+        time.sleep(3)
+
+    def del_cancel(self):
+        self.driver.find_element(By.XPATH,self.del_popup_cancel).click()
+
+    def del_close(self):
+        # time.sleep(5)
+        self.wait_until_element_is_clickable(By.LINK_TEXT,self.del_popup_close).click()
+
+    def cnf_del_success(self):
+        self.data = self.driver.find_element(By.XPATH, self.del_success).text
+        # print(self.data)
+        if "Delete" in self.data:
+            print("Deleted Successfully")

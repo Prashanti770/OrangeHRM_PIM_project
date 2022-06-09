@@ -1,13 +1,15 @@
-06/03/2022 02:23:56 PM INFO ====== WebDriver manager ======
-06/03/2022 02:23:57 PM INFO Current edge version is 101.0.1210
-06/03/2022 02:23:57 PM INFO Get LATEST edgedriver version for 101.0.1210 Edge
-06/03/2022 02:23:57 PM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\101.0.1210.53\msedgedriver.exe] found in cache
-06/03/2022 02:24:01 PM INFO *************** Test_001_OH_Login *****************
-06/03/2022 02:24:01 PM INFO *************** openning Url ****************
-06/03/2022 02:24:07 PM INFO *************** Started Login page ****************
-06/03/2022 02:24:15 PM INFO *************** Login successfull ****************
-06/03/2022 02:24:16 PM INFO *************** Test_002_OH_PIM_EmpList *****************
-06/03/2022 02:24:16 PM INFO *************** Clicking on PIM Module *****************
-06/03/2022 02:24:18 PM INFO *************** Clicking on Employee List in PIM Module *****************
-06/03/2022 02:24:22 PM INFO *************** Clicking on Edit in Personal Details *****************
-06/03/2022 02:24:22 PM INFO *************** changing value in custom fields *****************
+06/08/2022 10:53:12 AM INFO ====== WebDriver manager ======
+06/08/2022 10:53:12 AM INFO Current edge version is 102.0.1245
+06/08/2022 10:53:12 AM INFO Get LATEST edgedriver version for 102.0.1245 Edge
+06/08/2022 10:53:13 AM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\102.0.1245.33\msedgedriver.exe] found in cache
+06/08/2022 10:53:15 AM INFO *************** Test_001_OH_Login *****************
+06/08/2022 10:53:15 AM INFO *************** openning Url ****************
+06/08/2022 10:53:24 AM INFO *************** Started Login page ****************
+06/08/2022 10:53:32 AM INFO *************** Login successfull ****************
+06/08/2022 10:53:32 AM INFO *************** Test_002_OH_PIM_EmpList *****************
+06/08/2022 10:53:32 AM INFO *************** Clicking on PIM Module *****************
+06/08/2022 10:53:35 AM INFO *************** Clicking on Employee List in PIM Module *****************
+06/08/2022 10:53:36 AM INFO *************** Searching Employee Info *****************
+06/08/2022 10:53:36 AM INFO *************** Employee Info - Search by Jobtitle *****************
+06/08/2022 10:53:36 AM INFO *************** Employee Info - Search button click *****************
+06/08/2022 10:53:37 AM INFO *************** Employee Info - print table of search results in cmd based on jobtitle  *****************
