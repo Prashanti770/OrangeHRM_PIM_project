@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 from base.base_driver import BaseDriver
 
@@ -23,6 +24,24 @@ class OH_PIM_Contactdetails(BaseDriver):
     condet_att_comment = "//textarea[@id='txtAttDesc']"
     condet_att_upload_btn ="//input[@id='btnSaveAttachment']"
     condet_att_cancel_btn ="//input[@id='cancelButton']"
+
+    #Emergency details locators
+    emgncy_cntct_btn_lt = "Emergency Contacts"
+    emg_cntct_add = "//input[@id='btnAddContact']"
+    ec_add_name = "//input[@id='emgcontacts_name']"
+    ec_add_relation ="//input[@id='emgcontacts_relationship']"
+    ec_add_mobile = "//input[@id='emgcontacts_mobilePhone']"
+    ec_add_save ="//input[@id='btnSaveEContact']"
+    ec_add_cancel ="//input[@id='btnCancel']"
+
+    #Dependents details
+    dependents_btn_lt = "Dependents"
+    dep_add_btn = "//input[@id='btnAddDependent']"
+    dep_add_rltn = "//select[@id='dependent_relationshipType']"
+    dep_add_name = "//input[@id='dependent_name']"
+    dep_add_save ="//input[@id='btnSaveDependent']"
+    dep_add_cancel = "//input[@id='btnCancel']"
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -64,3 +83,33 @@ class OH_PIM_Contactdetails(BaseDriver):
     def contdetails_attach_cancel(self):
         self.driver.find_element(By.XPATH, self.condet_att_cancel_btn).click()
 
+    def emgncy_contdetails(self):
+        self.driver.find_element(By.LINK_TEXT, self.emgncy_cntct_btn_lt).click()
+
+    def emg_cont_add(self, name, rltn, mobile):
+        self.driver.find_element(By.XPATH, self.emg_cntct_add).click()
+        self.driver.find_element(By.XPATH, self.ec_add_name).send_keys(name)
+        self.driver.find_element(By.XPATH, self.ec_add_relation).send_keys(rltn)
+        self.driver.find_element(By.XPATH, self.ec_add_mobile).send_keys(mobile)
+
+    def emg_cont_save(self):
+        self.driver.find_element(By.XPATH, self.ec_add_save).click()
+
+    def emg_cont_cancel(self):
+        self.driver.find_element(By.XPATH, self.ec_add_cancel).click()
+
+    def dep_details(self):
+        self.driver.find_element(By.LINK_TEXT, self.dependents_btn_lt).click()
+
+    def dep_add(self, name, rltn):
+        self.driver.find_element(By.XPATH, self.dep_add_btn).click()
+        self.driver.find_element(By.XPATH, self.dep_add_name).send_keys(name)
+        rltn_dd = Select(self.driver.find_element(By.XPATH, self.dep_add_rltn))
+        rltn_dd.select_by_visible_text(rltn)
+
+
+    def dep_save(self):
+        self.driver.find_element(By.XPATH, self.dep_add_save).click()
+
+    def dep_cancel(self):
+        self.driver.find_element(By.XPATH, self.dep_add_cancel).click()

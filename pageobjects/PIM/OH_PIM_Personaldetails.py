@@ -56,6 +56,17 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
     def edit_pd(self):
         self.driver.find_element(By.XPATH,self.pd_edit_btn).click()
 
+    def verify_textbox(self):
+        tb_fname = "personal_txtEmpFirstName"
+        tb_mname = "personal_txtEmpMiddleName"
+        ele = self.driver.find_element(By.ID,tb_mname)
+        txt = ele.get_attribute('value')
+        print(txt)
+        if txt != "" :
+            print("text box is not empty")
+        else:
+            print("text box is empty")
+
     def edit_pdetails(self,name,radio_value):
        nation_value = Select(self.driver.find_element(By.XPATH,self.Nationality_xp))
        nation_value.select_by_visible_text(name)
