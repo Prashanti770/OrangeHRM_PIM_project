@@ -47,6 +47,7 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
         print(fsize)
         for i in all_text:
             verify = i.is_enabled()
+            # text = i.get_attribute('value')
             text = i.get_attribute("name")
             if verify == False:
                 print(text,verify, "Element is Disabled")

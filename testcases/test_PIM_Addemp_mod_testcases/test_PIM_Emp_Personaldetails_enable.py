@@ -12,12 +12,12 @@ class Test_009_PIM_Emp_Perdetails(Test_002_OH_PIM_EmpList):
         self.pd.table_link_click(id)
         self.edit = OH_PIM_Emp_Perdetails(self.driver)
         # self.logger.info("*************** verify Employee Personal Details enable or not *****************")
-        # self.edit.personaldetails_verify()
-        self.logger.info("*************** Clicking on Edit in Personal Details *****************")
-        self.edit.edit_pd()
+        self.edit.personaldetails_verify()
+        # self.logger.info("*************** Clicking on Edit in Personal Details *****************")
+        # self.edit.edit_pd()
 
         #verify text box
-        self.edit.verify_textbox()
+        # self.edit.verify_textbox()
 
         # self.logger.info("*************** verify Employee Personal Details enable or not *****************")
         # self.edit.personaldetails_verify()
