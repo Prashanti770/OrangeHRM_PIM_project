@@ -87,11 +87,19 @@ class Excel_Time(BaseDriver):
             thu = XLutilities.readData(path,'timesheet',r,6)
             fri = XLutilities.readData(path,'timesheet',r,7)
             # XLutilities.writeData(path, 'timesheet', r, 8, "row added successfully")
-            print("webtable row count",wt_rowcount)
-            for wt_r in range(1,wt_rowcount):
-                col_value1 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(
-                    2) + time_tb_br2 + time_td_input
+            # print("webtable row count",wt_rowcount)
+            wt_r = 0
+            for wt_r in range(0,wt_rowcount):
+                print("initial count",wt_r)
+
+                wti_r = wt_r+1
+            # wti_r=1
+                print("increement count",wti_r)
+                col_value1 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(
+                        2) + time_tb_br2 + time_td_input
+
                 drp_down3 = self.driver.find_element(By.XPATH, col_value1)
+                print("xpath",drp_down3.text)
                 drp_down3.clear()
                 # print(projectname)
                 drp_down3.send_keys(projectname)
@@ -99,8 +107,8 @@ class Excel_Time(BaseDriver):
                 drp_down3.send_keys(Keys.ENTER)
 
                 # activity value
-                print(activityname)
-                col_value2 = time_tbrows + time_tb_br1+ str(wt_r)+time_tb_br2+time_tb_cols+time_tb_br1+ str(3)+time_tb_br2+time_td_select
+                # print(activityname)
+                col_value2 = time_tbrows + time_tb_br1+ str(wti_r)+time_tb_br2+time_tb_cols+time_tb_br1+ str(3)+time_tb_br2+time_td_select
 
                 # print(col_value2)
                 drp_down2 = self.driver.find_element(By.XPATH, col_value2)
@@ -110,24 +118,37 @@ class Excel_Time(BaseDriver):
                 # # drp_down2.select_by_value(activityname)
 
                 drp_down2.send_keys(activityname)
-                # drp_down2.send_keys(Keys.ARROW_DOWN)
+            # drp_down2.send_keys(Keys.ARROW_DOWN)
                 time.sleep(3)
                 drp_down2.send_keys(Keys.ENTER)
 
                 # mon tue.....values
-                col_value3 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(4) + time_tb_br2 + time_td_input
+                col_value3 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(4) + time_tb_br2 + time_td_input
                 self.driver.find_element(By.XPATH, col_value3).send_keys(mon)
-        #         col_value4 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(5) + time_tb_br2 + time_td_input
-        #         self.driver.find_element(By.XPATH, col_value4).send_keys(tue)
-        #         col_value5 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(6) + time_tb_br2 + time_td_input
-        #         self.driver.find_element(By.XPATH,col_value5).send_keys(wed)
-        #         col_value6 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(7) + time_tb_br2 + time_td_input
-        #         self.driver.find_element(By.XPATH, col_value6).send_keys(thu)
-        #         col_value7 = time_tbrows + time_tb_br1 + str(wt_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(8) + time_tb_br2 + time_td_input
-        #         self.driver.find_element(By.XPATH, col_value7).send_keys(fri)
-        #         # if col_value1 == "":
-        #
+                col_value4 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(5) + time_tb_br2 + time_td_input
+                self.driver.find_element(By.XPATH, col_value4).send_keys(tue)
+                # col_value5 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(6) + time_tb_br2 + time_td_input
+                # self.driver.find_element(By.XPATH,col_value5).send_keys(wed)
+                # col_value6 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(7) + time_tb_br2 + time_td_input
+                # self.driver.find_element(By.XPATH, col_value6).send_keys(thu)
+                # col_value7 = time_tbrows + time_tb_br1 + str(wti_r) + time_tb_br2 + time_tb_cols + time_tb_br1 + str(8) + time_tb_br2 + time_td_input
+                # self.driver.find_element(By.XPATH, col_value7).send_keys(fri)
+                # save_btn_xpath = "//input[@id='submitSave']"
+                # self.driver.find_element(By.XPATH,save_btn_xpath).click()
+                # break
+                # self.driver.find_element(By.XPATH,"//input[@id='btnEdit']").click()
+                self.driver.find_element(By.XPATH, self.addrow_xp).click()
+                # if col_value1 == "":
+                #     self.driver.find_element(By.XPATH, self.addrow_xp).click()
+                # break
+                print(wti_r, "row inserted successfully")
+                wti_r+=1
+                print("initial increement count", wti_r)
+
+            # break
         # self.driver.find_element(By.XPATH, self.addrow_xp).click()
+            # break
+
 
 
 

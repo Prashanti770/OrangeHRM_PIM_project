@@ -3,7 +3,7 @@ import allure
 import pytest
 from allure_commons.types import AttachmentType
 from pageobjects.OH_loginpage import OH_Loginpage
-from utilities.read_properties import ReadConfig
+from utilities.readproperties import ReadConfig
 from utilities.customlogger import LogGen
 
 @allure.severity(allure.severity_level.BLOCKER)
