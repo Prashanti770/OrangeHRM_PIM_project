@@ -22,8 +22,8 @@ class Test_004_OH_PIM_Empinfo_Searchbyid(Test_002_OH_PIM_EmpList):
         self.empid.empinfo_search()
         self.logger.info("*************** Employee Info - Verify in table results *****************")
         allure.attach(self.driver.get_screenshot_as_png(), name="Test_004_OH_PIM_Empinfo_Searchbyid", attachment_type=AttachmentType.PNG)
-        # self.empid.table_searchempbyId(emp_id)
-        self.empid.table_link_click(emp_id)
+        self.empid.table_searchempbyId(emp_id)
+        # self.empid.table_link_click(emp_id)
         # status = self.empid.searchempbyId(empid)
         # assert True == status
         # print(status)

@@ -24,9 +24,10 @@ class Test_OH_PIM_Config_OPF(Test_001_OH_Login):
         self.pim_conf_opf.config_opf_edit()
         self.logger.info("*************** Editing Configure PIM *****************")
         self.pim_conf_opf.config_opf_check()
-        self.logger.info("*************** Verifying Configure PIM after modify *****************")
-        self.pim_conf_opf.configure_PIM_verify()
         self.logger.info("*************** Save Configure PIM *****************")
         self.pim_conf_opf.config_opf_edit()
+        self.logger.info("*************** Verifying Configure PIM after modify *****************")
+        self.pim_conf_opf.configure_PIM_verify()
+
 
 

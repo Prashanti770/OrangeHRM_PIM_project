@@ -45,7 +45,7 @@ class OH_PIM_Configuration_CF(BaseDriver):
         self.wait_until_element_is_clickable(By.XPATH, self.add_cf_name).send_keys(name)
         sel_screen=Select(self.wait_until_element_is_clickable(By.XPATH, self.add_cf_screen))
         sel_screen.select_by_visible_text(scrn)
-        sel_type = Select(self.wait_until_element_is_clickable(By.XPATH, self.add_cf_screen))
+        sel_type = Select(self.wait_until_element_is_clickable(By.XPATH, self.add_cf_type))
         sel_type.select_by_visible_text(type)
 
     def acf_save(self):
@@ -54,14 +54,12 @@ class OH_PIM_Configuration_CF(BaseDriver):
     def acf_cancel(self):
         self.wait_until_element_is_clickable(By.XPATH, self.add_cf_cancel).click()
 
-    def dcf_table_search_del(self,name):
+    def dcf_table_search_delete(self,name):
         #//table[@id='customFieldList']/tbody/tr[1]/td[2]
         result_table = self.wait_until_element_is_clickable(By.XPATH, self.confg_dcf_table)
         rows = result_table.find_elements(By.TAG_NAME, self.confg_dcf_row_tag)
         rows_count = len(rows)
-        print(rows_count)
-        print(
-            "Custom Field Name" + "      " + "Screen" + "       " + "Field Type")
+        print("rows count",rows_count)
         for r in range(1, rows_count):
             # cols = rows[r].find_elements(By.TAG_NAME, self.confg_dcf_cols)
             # cols_count = len(cols)
@@ -76,11 +74,6 @@ class OH_PIM_Configuration_CF(BaseDriver):
                 self.driver.find_element(By.XPATH, chkvalue_xpath).click()
                 time.sleep(3)
                 self.driver.find_element(By.XPATH, self.confg_dcf_delete).click()
-
-            else:
-                print("No Records Found")
-
-        print()
 
 
     def del_ok(self):
@@ -114,15 +107,30 @@ class OH_PIM_Configuration_CF(BaseDriver):
         # table = self.wait_until_element_is_clickable(By.XPATH, self.confg_dcf_table)
         # row = table.find_elements(By.XPATH, self.dcf_row)
         row = self.driver.find_elements(By.XPATH, self.confg_dcf_rows)
-        row_count1 = len(row)
-        print("rows count",row_count1)
-        for r in range(1, row_count1):
-            cols = row[r].find_elements(By.TAG_NAME, self.confg_dcf_cols_tag)
+        row_counts = len(row)
+        # for rvalue in row:
+        #     print(rvalue.text)
+        print("rows count",row_counts)
+        print("Custom Field Name" + "      " + "Screen" + "       " + "Field Type")
+        for r in range(1, row_counts):
+            cols = row[r].find_elements(By.XPATH, self.confg_dcf_cols_tag)
             cols_count1 = len(cols)
             print("columns count",cols_count1)
-            for c in range(2, cols_count1):
+
+            for c in range(2, cols_count1+1):
+                # print(c)
                 col_value = self.driver.find_element(By.XPATH, self.confg_dcf_rows + self.br1 + str(r)
                                                      + self.br2 + self.confg_dcf_cols + self.br1
                                                      + str(c) + self.br2)
+                # col_value2 = self.driver.find_element(By.XPATH, self.confg_dcf_rows + self.br1 + str(r)
+                #                                      + self.br2 + self.confg_dcf_cols + self.br1
+                #                                      + str(4) + self.br2)
+
+
                 value = col_value.text
+                # value2 = col_value2.text
+                # print(value2)
                 print(value,end="      ")
+
+            print()
+

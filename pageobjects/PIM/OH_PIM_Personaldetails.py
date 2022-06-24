@@ -34,7 +34,7 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
     del_popup_cancel = "//input[@id='btnNo']"
     # del_popup_close = "//div[@id='displayAbout']/div/a"
     del_popup_close = "×"
-    del_success = ""
+    del_success = "//form[@id='frmPhoto']"
 
 
     def __init__(self,driver):
@@ -124,6 +124,6 @@ class OH_PIM_Emp_Perdetails(BaseDriver):
 
     def cnf_del_success(self):
         self.data = self.driver.find_element(By.XPATH, self.del_success).text
-        # print(self.data)
-        if "Delete" in self.data:
+        print(self.data)
+        if "Deleted" in self.data:
             print("Deleted Successfully")

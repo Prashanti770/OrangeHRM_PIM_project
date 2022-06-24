@@ -76,6 +76,7 @@ class OH_PIM_EmpList(BaseDriver):
         ele.send_keys(Keys.ENTER)
 
     def empinfo_empid(self,emp_id):
+        self.wait_until_element_is_clickable(By.ID, self.empinfo_id_id).clear()
         self.wait_until_element_is_clickable(By.ID, self.empinfo_id_id).send_keys(emp_id)
 
     def empinfo_empstatus(self):
@@ -148,7 +149,7 @@ class OH_PIM_EmpList(BaseDriver):
             for c in range(1, cols_count):
                 col_value = self.driver.find_element(By.XPATH, self.empinfo_tbrows + self.empinfo_tb_br1 + str(r)
                                                      + self.empinfo_tb_br2 + self.empinfo_tb_cols + self.empinfo_tb_br1
-                                                     + str(5) + self.empinfo_tb_br2)
+                                                     + str(2) + self.empinfo_tb_br2)
                 value = col_value.text
                 if value == id:
                     print(cols[c].text, end="         ")
