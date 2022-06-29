@@ -29,5 +29,4 @@ class Test_config_verifyimport(Test_002_OH_PIM_EmpList):
                 self.empid.table_searchempbyId(row[3])
                 line_count += 1
 
-        # self.empid = OH_PIM_EmployeeList.OH_PIM_EmpList(self.driver)
-        # self.empid.empinfo_empid(emp_id)
+
