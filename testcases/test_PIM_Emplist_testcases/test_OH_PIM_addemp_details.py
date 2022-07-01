@@ -10,10 +10,10 @@ class Test_PIM_addemp_details:
     def test_addemployee(self):
         self.logger.info("*************** Test Method : Test_PIM_addemp_details  *****************")
         self.logger.info("*************** Filling  Employee Details *****************")
-        first = "orange2"
+        first = "orange3"
         middle = "hrm1"
         last = "demo1"
-        path_photo = "C:\\PrashantiM\\OrangeHRM_PIM_project\\testdata\\R.png"
+        path_photo = "C:\\Prashanti M\\Pycharm projects\\OrangeHRM_PIM_project\\testdata\\R.png"
         self.add_emp = OH_PIM_EmpList_Add.OH_PIM_EmpList_Add(self.driver)
         self.add_emp.emplist_addemp(first ,middle ,last ,path_photo)
 

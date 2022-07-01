@@ -1,13 +1,18 @@
-06/28/2022 08:47:54 AM INFO ====== WebDriver manager ======
-06/28/2022 08:47:55 AM INFO Current edge version is 103.0.1264
-06/28/2022 08:47:55 AM INFO Get LATEST edgedriver version for 103.0.1264 Edge
-06/28/2022 08:47:55 AM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\103.0.1264.37\msedgedriver.exe] found in cache
-06/28/2022 08:48:02 AM INFO *************** Test_001_OH_Login *****************
-06/28/2022 08:48:02 AM INFO *************** openning Url ****************
-06/28/2022 08:48:07 AM INFO *************** Started Login page ****************
-06/28/2022 08:48:16 AM INFO *************** Login successfull ****************
-06/28/2022 08:48:16 AM INFO *************** Test_OH_PIM_EmpList *****************
-06/28/2022 08:48:16 AM INFO *************** Clicking on PIM Module *****************
-06/28/2022 08:48:19 AM INFO *************** Clicking on Configurations Module *****************
-06/28/2022 08:48:19 AM INFO *************** Clicking on Termination Reasons in Configurations Module *****************
-06/28/2022 08:48:20 AM INFO *************** comparing add - table value and home table values in Termination Reasons  *****************
+07/01/2022 04:10:23 PM INFO ====== WebDriver manager ======
+07/01/2022 04:10:23 PM INFO Current edge version is 103.0.1264
+07/01/2022 04:10:23 PM INFO Get LATEST edgedriver version for 103.0.1264 Edge
+07/01/2022 04:10:23 PM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\103.0.1264.37\msedgedriver.exe] found in cache
+07/01/2022 04:10:26 PM INFO *************** Test_001_OH_Login *****************
+07/01/2022 04:10:26 PM INFO *************** openning Url ****************
+07/01/2022 04:10:32 PM INFO *************** Started Login page ****************
+07/01/2022 04:10:40 PM INFO *************** Login successfull ****************
+07/01/2022 04:10:40 PM INFO *************** Test_002_OH_PIM_EmpList *****************
+07/01/2022 04:10:40 PM INFO *************** Clicking on PIM Module *****************
+07/01/2022 04:10:43 PM INFO *************** Clicking on Employee List in PIM Module *****************
+07/01/2022 04:10:43 PM INFO *************** Test_005_OH_PIM_EmpList_Add  *****************
+07/01/2022 04:10:43 PM INFO *************** Clicking on Add Employee *****************
+07/01/2022 04:10:44 PM INFO *************** Adding Employee Details *****************
+07/01/2022 04:10:44 PM INFO *************** Test Method : Test_PIM_addemp_details  *****************
+07/01/2022 04:10:44 PM INFO *************** Filling  Employee Details *****************
+07/01/2022 04:10:44 PM INFO *************** Clicking on Creating Login option *****************
+07/01/2022 04:10:45 PM INFO *************** Clicking on save button *****************
