@@ -98,16 +98,32 @@ class OH_PIM_EmpList(BaseDriver):
         select_jobtitle = Select(jobtitle)
         jobtitle_options = select_jobtitle.options
         # print(len(jobtitle_options))
+        # sortvalues = []
+
         for option in jobtitle_options:
             opt_value = option.text
+            # sortvalues.append(opt_value)
             # print(opt_value)
             if opt_value == jobtitle_value:
                 select_jobtitle.select_by_visible_text(jobtitle_value)
-            # else:
-            #     print("error")
+
+        # print("before sorting values are:",sortvalues)
+        # sv = sortvalues
+        # print("After sorting dropdown values are:",sorted(sv,reverse=True))
 
     def empifno_subunit(self):
         select_subunit = Select(self.wait_until_element_is_clickable(By.ID, self.empinfo_subunit_id))
+        # subunit = select_subunit.options
+        # su = []
+        # for option in subunit:
+        #     opt_value = option.text
+        #     # su.append(opt_value)
+        #     re_opvalue = opt_value.replace(" ", "")
+        #     su.append(re_opvalue)
+        # print("Before sorting",su)
+        # after_su = su
+        # print("After sorting values", sorted(after_su))
+
         select_subunit.select_by_value('5')
 
     def empinfo_search(self):

@@ -15,10 +15,10 @@ class Test_008_OH_PIM_Empinfo_Searchbyjobtitle(Test_002_OH_PIM_EmpList):
         job_title = "HR Associate"
         self.jt = OH_PIM_EmployeeList.OH_PIM_EmpList(self.driver)
         self.jt.empinfo_jobtitle(job_title)
-        self.logger.info("*************** Employee Info - Search button click *****************")
-        self.jt.empinfo_search()
-        self.logger.info("*************** Employee Info - print table of search results in cmd based on jobtitle  *****************")
-        self.jt.table_searchempbyId(job_title)
+        # self.logger.info("*************** Employee Info - Search button click *****************")
+        # self.jt.empinfo_search()
+        # self.logger.info("*************** Employee Info - print table of search results in cmd based on jobtitle  *****************")
+        # self.jt.table_searchempbyId(job_title)
         # time.sleep(3)
         # self.logger.info("*************** Employee Info - delete employee based on job_title and emp id *****************")
         # emp_id = "0204"

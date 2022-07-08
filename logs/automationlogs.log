@@ -1,18 +1,12 @@
-07/01/2022 04:10:23 PM INFO ====== WebDriver manager ======
-07/01/2022 04:10:23 PM INFO Current edge version is 103.0.1264
-07/01/2022 04:10:23 PM INFO Get LATEST edgedriver version for 103.0.1264 Edge
-07/01/2022 04:10:23 PM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\103.0.1264.37\msedgedriver.exe] found in cache
-07/01/2022 04:10:26 PM INFO *************** Test_001_OH_Login *****************
-07/01/2022 04:10:26 PM INFO *************** openning Url ****************
-07/01/2022 04:10:32 PM INFO *************** Started Login page ****************
-07/01/2022 04:10:40 PM INFO *************** Login successfull ****************
-07/01/2022 04:10:40 PM INFO *************** Test_002_OH_PIM_EmpList *****************
-07/01/2022 04:10:40 PM INFO *************** Clicking on PIM Module *****************
-07/01/2022 04:10:43 PM INFO *************** Clicking on Employee List in PIM Module *****************
-07/01/2022 04:10:43 PM INFO *************** Test_005_OH_PIM_EmpList_Add  *****************
-07/01/2022 04:10:43 PM INFO *************** Clicking on Add Employee *****************
-07/01/2022 04:10:44 PM INFO *************** Adding Employee Details *****************
-07/01/2022 04:10:44 PM INFO *************** Test Method : Test_PIM_addemp_details  *****************
-07/01/2022 04:10:44 PM INFO *************** Filling  Employee Details *****************
-07/01/2022 04:10:44 PM INFO *************** Clicking on Creating Login option *****************
-07/01/2022 04:10:45 PM INFO *************** Clicking on save button *****************
+07/05/2022 10:49:01 AM INFO ====== WebDriver manager ======
+07/05/2022 10:49:03 AM INFO Current edge version is 103.0.1264
+07/05/2022 10:49:03 AM INFO Get LATEST edgedriver version for 103.0.1264 Edge
+07/05/2022 10:49:03 AM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\103.0.1264.45\msedgedriver.exe] found in cache
+07/05/2022 10:49:07 AM INFO *************** Test_001_OH_Login *****************
+07/05/2022 10:49:07 AM INFO *************** openning Url ****************
+07/05/2022 10:49:13 AM INFO *************** Started Login page ****************
+07/05/2022 10:49:20 AM INFO *************** Login successfull ****************
+07/05/2022 10:49:20 AM INFO *************** Test_002_OH_PIM_EmpList *****************
+07/05/2022 10:49:20 AM INFO *************** Clicking on PIM Module *****************
+07/05/2022 10:49:22 AM INFO *************** Clicking on Employee List in PIM Module *****************
+07/05/2022 10:49:22 AM INFO *************** Employee Info - Search by Subunit *****************
