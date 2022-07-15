@@ -8,7 +8,7 @@ from pageobjects.PIM import OH_PIM_EmployeeList
 @pytest.mark.usefixtures("test_OH_loginpage")
 class Test_002_OH_PIM_EmpList(Test_001_OH_Login):
 
-    # @pytest.fixture(scope="function")
+    @pytest.fixture(scope="function")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.sanity
     def test_OH_pim(self):

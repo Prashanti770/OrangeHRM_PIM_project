@@ -13,6 +13,7 @@ def setup(browser):
         print("Launching chrome browser.................")
     elif browser == 'firefox':
         # driver = webdriver.Firefox()
+
         driver = webdriver.Firefox(GeckoDriverManager().install())
         print("Launching Firefox browser ...................")
     else:
