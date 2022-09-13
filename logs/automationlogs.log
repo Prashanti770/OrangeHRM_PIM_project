@@ -1,12 +1,7 @@
-07/05/2022 10:49:01 AM INFO ====== WebDriver manager ======
-07/05/2022 10:49:03 AM INFO Current edge version is 103.0.1264
-07/05/2022 10:49:03 AM INFO Get LATEST edgedriver version for 103.0.1264 Edge
-07/05/2022 10:49:03 AM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\103.0.1264.45\msedgedriver.exe] found in cache
-07/05/2022 10:49:07 AM INFO *************** Test_001_OH_Login *****************
-07/05/2022 10:49:07 AM INFO *************** openning Url ****************
-07/05/2022 10:49:13 AM INFO *************** Started Login page ****************
-07/05/2022 10:49:20 AM INFO *************** Login successfull ****************
-07/05/2022 10:49:20 AM INFO *************** Test_002_OH_PIM_EmpList *****************
-07/05/2022 10:49:20 AM INFO *************** Clicking on PIM Module *****************
-07/05/2022 10:49:22 AM INFO *************** Clicking on Employee List in PIM Module *****************
-07/05/2022 10:49:22 AM INFO *************** Employee Info - Search by Subunit *****************
+08/29/2022 10:23:19 AM INFO ====== WebDriver manager ======
+08/29/2022 10:23:21 AM INFO Current edge version is 104.0.1293
+08/29/2022 10:23:21 AM INFO Get LATEST edgedriver version for 104.0.1293 Edge
+08/29/2022 10:23:21 AM INFO Driver [C:\Users\User\.wdm\drivers\edgedriver\win64\104.0.1293.70\msedgedriver.exe] found in cache
+08/29/2022 10:23:25 AM INFO *************** Test_001_OH_Login *****************
+08/29/2022 10:23:25 AM INFO *************** openning Url ****************
+08/29/2022 10:23:29 AM INFO *************** Started Login page ****************

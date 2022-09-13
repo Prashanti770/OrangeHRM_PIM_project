@@ -9,11 +9,12 @@ from utilities.customlogger import LogGen
 @allure.severity(allure.severity_level.BLOCKER)
 class Test_001_OH_Login:
     baseURL = ReadConfig.getApplicationURL()
+
     username = ReadConfig.getUseremail()
     password = ReadConfig.getPassword()
     logger = LogGen.loginfo()
 
-    @pytest.fixture
+    # @pytest.fixture
     @pytest.mark.sanity
    # @allure.severity(allure.severity_level.CRITICAL)
     def test_OH_loginpage(self,setup):
